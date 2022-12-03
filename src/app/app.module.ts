@@ -12,7 +12,45 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmpregComponent } from './empreg/empreg.component';
 import { AddcourseComponent } from './addcourse/addcourse.component';
 import { AddfriendComponent } from './addfriend/addfriend.component';
+import { Navbar1Component } from './navbar1/navbar1.component';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+const myRoute:Routes=[
+  {
+    path:"",
+    component:HomeComponent
+  },
+  {
+    path:"gallery",
+    component:GalleryComponent
+  },
+  {
+    path:"about",
+    component:AboutComponent
 
+  },
+  {
+    path:"contact",
+    component:ContactComponent
+
+  },
+  {
+    path:"admin",
+    component:AdminloginComponent
+  },
+  {
+    path:"employee",
+    component:EmployeeComponent
+  },
+  {
+    path:"empreg",
+    component:EmpregComponent
+  },
+  {
+    path:"addcourse",
+    component:AddcourseComponent
+  }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,11 +62,14 @@ import { AddfriendComponent } from './addfriend/addfriend.component';
     EmployeeComponent,
     EmpregComponent,
     AddcourseComponent,
-    AddfriendComponent
+    AddfriendComponent,
+    Navbar1Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myRoute),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
