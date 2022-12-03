@@ -1,3 +1,4 @@
+<app-navbar2></app-navbar2>
 <div class="container">
 
     <div class="row">
@@ -17,14 +18,14 @@
 
                     <label for="" class="form-label">Name</label>
 
-                    <input  type="text" class="form-control">
+                    <input name="name" [(ngModel)]="name" type="text" class="form-control">
 
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
                     <label for=""  class="form-label">Friend Name</label>
 
-                    <input  type="text" class="form-control">
+                    <input name="fname" [(ngModel)]="fname" type="text" class="form-control">
 
                 </div>
 
@@ -32,7 +33,7 @@
 
                     <label for="" class="form-label">Description Your Friend</label>
 
-                    <textarea  id=""  rows="5" class="form-control"></textarea>
+                    <textarea name="dyf" [(ngModel)]="dyf" id=""  rows="5" class="form-control"></textarea>
 
                 </div>
 
@@ -40,13 +41,13 @@
 
                     <label for="" class="form-label">Friend Nick Name</label>
 
-                    <input  type="text" class="form-control">
+                    <input name="fnn" [(ngModel)]="fnn" type="text" class="form-control">
 
 
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
 
-                    <button  class="btn btn-success">Submit</button>
+                    <button (click)="readValues()" class="btn btn-success">Submit</button>
 
 
 
