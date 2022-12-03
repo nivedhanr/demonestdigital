@@ -15,6 +15,7 @@ import { AddfriendComponent } from './addfriend/addfriend.component';
 import { Navbar1Component } from './navbar1/navbar1.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { Navbar2Component } from './navbar2/navbar2.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -49,6 +50,14 @@ const myRoute:Routes=[
   {
     path:"addcourse",
     component:AddcourseComponent
+  },
+  {
+    path:"addfriend",
+    component:AddfriendComponent
+  },
+  {
+    path:"navbar2",
+    component:Navbar2Component
   }
 ]
 @NgModule({
@@ -63,7 +72,8 @@ const myRoute:Routes=[
     EmpregComponent,
     AddcourseComponent,
     AddfriendComponent,
-    Navbar1Component
+    Navbar1Component,
+    Navbar2Component
   ],
   imports: [
     BrowserModule,
